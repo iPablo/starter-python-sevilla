@@ -18,3 +18,9 @@ class PostCreateView(generic.CreateView):
     form_class = CreatePostForm
     success_url = reverse_lazy('posts_lists')
     template_name = 'python_sevilla/create.html'
+
+
+class PostDetailView(generic.DetailView):
+    model = posts
+    template_name = 'python_sevilla/detail.html'
+    context_object_name = 'post'
